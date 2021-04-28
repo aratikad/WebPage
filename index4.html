@@ -1,0 +1,120 @@
+
+
+
+<!Doctype html>
+
+<html>
+	<head>
+		<title>This is CID FAN web page.</title>
+<style>
+	#heading{
+		display:flex;
+		flex-direction:row;
+		background-image: url(D.jpg);
+		color:white;
+		padding:10px;
+		border:3px solid red;
+		text-align:center;
+		
+	}
+	body
+	{
+		background-image: url(B.jpg);
+		margin:120px;
+		padding:0px;
+	}
+	#myLinks{
+		display:flex;
+		padding:10px;
+		background-color:orange;
+		flex:1;
+	}
+	#container{
+		width:60%;
+		margin:auto;
+		border:1px solid;
+		
+		flex-direction:column;
+	}
+	#innerContainer{
+		display:flex;
+		flex:1;
+		flex-direction:row;
+
+	}
+	#magic{
+		
+		flex:1;
+		flex-direction:row;
+		background-color:blue;
+		padding:10px;
+	}
+	#title{
+		text-align:center;
+		margin:auto;
+	}
+</style>
+	</head>
+	<body>
+	<div id="container">
+		<div id="heading">
+			<div id=title>
+			<h1><p style="color:yellow">Welcome to CID's web page!</p></h1>
+			</div>
+		</div>
+		<div id="innerContainer">
+		<div id="magic">
+			<p id="message">Click to see special episode names!</p>
+			<label>Enter cid character name:</label>
+			<input id="name" type=text name="name" value="">
+			<h2 id="change"></h2>
+			<div id="content">
+				<button id="btnMagic">click</button>
+			</div>
+		</div>
+		<div id="myLinks">
+			<h4>Some Information...</h4>
+			<ul>
+				<li><a href="acp.html">ACP</a></li>
+				<li><a href="abhijit.html">ABHIJIT</a></li>
+				<li><a href="daya.html">DAYA</a></li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	<script>
+		var btnEl=document.getElementById("btnMagic");
+		console.log(btnEl);
+		var onClickButton = function()
+		{
+			var nameE1=document.getElementById("name");
+			var headE1=document.getElementById("change");
+			console.log(headE1);
+                                             
+			
+	              
+			if(nameE1.value==="abhijit")
+				{  
+			                  console.log("A is printed..");
+			headE1.innerHTML=nameE1.value+" SPECIAL EPISODE<br>"+"<br>1.abhijit ka atit   2.giraftar serias";
+				}
+			else if(nameE1.value==="daya")
+		                  	 {    
+				    headE1.innerHTML=nameE1.value+" SPECIAL EPISODE<br>"+"<br>1.abhijit ka atit   2.giraftar serias";  
+				}
+			else if(nameE1.value==="acp")
+		                  	 {    
+				    headE1.innerHTML=nameE1.value+" SPECIAL EPISODE<br>"+"<br>1.abhijit ka atit   2.giraftar serias";  
+				}
+			else
+				 headE1.innerHTML="hiii";
+		           
+			                  
+		
+			btnEl.innerHTML="I am happy you Clicked me!";
+		};
+		btnEl.addEventListener("click",onClickButton);
+	</script>
+	</body>
+
+</html>  
